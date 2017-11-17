@@ -1,0 +1,870 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/10/2017 3:46:17 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="IE-010-W3200M43"
+  DTS:CreatorName="HENALLUX\etu32444"
+  DTS:DTSID="{FC83B76E-6274-40F5-860A-A45E8E658BD6}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.6020.0"
+  DTS:LocaleID="2060"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{14BE6BC7-999E-4743-B245-1B6B241477BE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fichier De Sortie]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F345D7C1-CB8A-46F6-B5FC-18A0E898C21F}"
+      DTS:ObjectName="fichier De Sortie">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="U:\Bi Scholtes\BI\date_out.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateDuJour"
+              DTS:DTSID="{441B084A-592D-4E38-A1BB-14A3FE0B37DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="jourDansLannee"
+              DTS:DTSID="{B1C40B5C-1302-4174-97F6-027F028250C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekNumber"
+              DTS:DTSID="{9139458E-3302-449A-ACA0-A4A9C4377ED0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfWeekNumber"
+              DTS:DTSID="{B831F74B-BBAB-4213-AC44-3D05F893E7F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NameOfDay"
+              DTS:DTSID="{38BEE70C-971F-474D-B14F-84860B6FEFCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NomDuJour"
+              DTS:DTSID="{EBD710AA-10CF-4E6E-9FB5-86B1C5C13C83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NameOfMonth"
+              DTS:DTSID="{A3AA2F1D-DFF2-473A-B06D-B2548EFCA57E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NomDuMois"
+              DTS:DTSID="{CD0EFC90-4815-4932-9C3D-EC22BF33DF4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="datekey"
+              DTS:DTSID="{1A09ECE5-FBA1-4A99-B62D-5AB9DF023DE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfYearNumber"
+              DTS:DTSID="{5D22C48A-7009-44D1-92D8-11251E9B33B7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B52F6264-15A4-4851-9A69-F23CD13C6D6B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="U:\Bi Scholtes\BI\date.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateDuJour"
+              DTS:DTSID="{3785AC11-50EF-4EAC-89A8-DEF065089143}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.1718_etu32444]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{43AB24FE-6E5D-431D-B8B5-57A0ECC9033B}"
+      DTS:ObjectName="vm-sql2.iesn.be\Stu3IG.1718_etu32444">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=vm-sql2.iesn.be\Stu3IG;User ID=1718_etu32444;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2OICSt49bkiclfX82PIGSAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACVk1WhU99yJDf0/LboKa57AAAAAASAAACgAAAAEAAAAAiPU7/CATHspjcuPGDBQgkYAAAAQ190htGSBH1TES4KdzNLNbzRqPCadrXqFAAAAPHCDXAHaG0TibCRI8arGmLcxA7s</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.1718_etu32444_DB.1718_etu32444]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B0914952-194A-48F6-AF3C-D09F9BDEDA82}"
+      DTS:ObjectName="vm-sql2.iesn.be\Stu3IG.1718_etu32444_DB.1718_etu32444">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=vm-sql2.iesn.be\Stu3IG;User ID=1718_etu32444;Initial Catalog=1718_etu32444_DB;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2OICSt49bkiclfX82PIGSAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABmlsSkFVvxdxSTmil5HsxgAAAAAASAAACgAAAAEAAAANpCfz8AdtpDP3f3QwQaVN8YAAAABWERgwa1s0uBOLmvDuFg+su/j12vC5OhFAAAAE/D7iIV7dTdoUiS0IYki6hsXYWy</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5B565680-3120-4CD6-8EB0-92F51636DE0A}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[DateDuJour]"
+                      cachedDataType="dbDate"
+                      cachedName="DateDuJour"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[WeekNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[WeekNumber]"
+                      name="WeekNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEPART]("wk",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEPART("wk",DateDuJour)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DayOfWeekNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DayOfWeekNumber]"
+                      name="DayOfWeekNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEPART("dw",DateDuJour)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NameOfDay]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NameOfDay]"
+                      name="NameOfDay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)(DT_STR,20,1252)(([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 7) ? "SUNDAY" : ([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 1) ? "MONDAY" : ([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 2) ? "TUESDAY" : ([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 3) ? "WEDNESDAY" : ([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 4) ? "THURSDAY" : ([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 5) ? "FRIDAY" : ([DATEPART]("dw",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 6) ? "SATURDAY" : "NULL")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)(DT_STR,20,1252)((DATEPART("dw",DateDuJour) == 7) ? "SUNDAY" : (DATEPART("dw",DateDuJour) == 1) ? "MONDAY" : (DATEPART("dw",DateDuJour) == 2) ? "TUESDAY" : (DATEPART("dw",DateDuJour) == 3) ? "WEDNESDAY" : (DATEPART("dw",DateDuJour) == 4) ? "THURSDAY" : (DATEPART("dw",DateDuJour) == 5) ? "FRIDAY" : (DATEPART("dw",DateDuJour) == 6) ? "SATURDAY" : "NULL")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NomDuJour]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NomDuJour]"
+                      name="NomDuJour"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)(DT_STR,20,1252)(([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 7) ? "DIMANCHE" : ([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 1) ? "LUNDI" : ([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 2) ? "MARDI" : ([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 3) ? "MERCREDI" : ([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 4) ? "JEUDI" : ([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 5) ? "VENDREDI" : ([DATEPART]("DW",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 6) ? "SAMEDI" : "NULL")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)(DT_STR,20,1252)((DATEPART("DW",DateDuJour) == 7) ? "DIMANCHE" : (DATEPART("DW",DateDuJour) == 1) ? "LUNDI" : (DATEPART("DW",DateDuJour) == 2) ? "MARDI" : (DATEPART("DW",DateDuJour) == 3) ? "MERCREDI" : (DATEPART("DW",DateDuJour) == 4) ? "JEUDI" : (DATEPART("DW",DateDuJour) == 5) ? "VENDREDI" : (DATEPART("DW",DateDuJour) == 6) ? "SAMEDI" : "NULL")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NameOfMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NameOfMonth]"
+                      name="NameOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)(DT_STR,20,1252)(([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 12) ? "DECEMBER" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 11) ? "NOVEMBER" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 10) ? "OCTOBER" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 9) ? "SEPTEMBER" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 8) ? "AUGUST" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 7) ? "JULY" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 6) ? "JUNE" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 5) ? "MAY" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 4) ? "APRIL" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 3) ? "MARCH" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 2) ? "FEBRUARY" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 1) ? "JANUARY" : "NULL")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)(DT_STR,20,1252)((MONTH(DateDuJour) == 12) ? "DECEMBER" : (MONTH(DateDuJour) == 11) ? "NOVEMBER" : (MONTH(DateDuJour) == 10) ? "OCTOBER" : (MONTH(DateDuJour) == 9) ? "SEPTEMBER" : (MONTH(DateDuJour) == 8) ? "AUGUST" : (MONTH(DateDuJour) == 7) ? "JULY" : (MONTH(DateDuJour) == 6) ? "JUNE" : (MONTH(DateDuJour) == 5) ? "MAY" : (MONTH(DateDuJour) == 4) ? "APRIL" : (MONTH(DateDuJour) == 3) ? "MARCH" : (MONTH(DateDuJour) == 2) ? "FEBRUARY" : (MONTH(DateDuJour) == 1) ? "JANUARY" : "NULL")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NomDuMois]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NomDuMois]"
+                      name="NomDuMois"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)(DT_STR,20,1252)(([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 12) ? "DECEMBRE" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 11) ? "NOVEMBRE" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 10) ? "OCTOBRE" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 9) ? "SEPTEMBRE" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 8) ? "AOUT" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 7) ? "JUILLET" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 6) ? "JUIN" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 5) ? "MAI" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 4) ? "AVRIL" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 3) ? "MARS" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 2) ? "FEVRIER" : ([MONTH](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}) == 1) ? "JANVIER" : "NULL")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)(DT_STR,20,1252)((MONTH(DateDuJour) == 12) ? "DECEMBRE" : (MONTH(DateDuJour) == 11) ? "NOVEMBRE" : (MONTH(DateDuJour) == 10) ? "OCTOBRE" : (MONTH(DateDuJour) == 9) ? "SEPTEMBRE" : (MONTH(DateDuJour) == 8) ? "AOUT" : (MONTH(DateDuJour) == 7) ? "JUILLET" : (MONTH(DateDuJour) == 6) ? "JUIN" : (MONTH(DateDuJour) == 5) ? "MAI" : (MONTH(DateDuJour) == 4) ? "AVRIL" : (MONTH(DateDuJour) == 3) ? "MARS" : (MONTH(DateDuJour) == 2) ? "FEVRIER" : (MONTH(DateDuJour) == 1) ? "JANVIER" : "NULL")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[datekey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[datekey]"
+                      name="datekey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)(((DT_WSTR,4)[YEAR](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]})) + [RIGHT]("0" + (DT_STR,4,1252)[DATEPART]("m",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}),2) + [RIGHT]("0" + (DT_STR,4,1252)[DATEPART]("d",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]}),2))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)(((DT_WSTR,4)YEAR(DateDuJour)) + RIGHT("0" + (DT_STR,4,1252)DATEPART("m",DateDuJour),2) + RIGHT("0" + (DT_STR,4,1252)DATEPART("d",DateDuJour),2))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DayOfYearNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DayOfYearNumber]"
+                      name="DayOfYearNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEPART]("dy",#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEPART("dy",DateDuJour)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Source"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2060"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateDuJour]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]"
+                      name="DateDuJour"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateDuJour]"
+                      dataType="dbDate"
+                      name="DateDuJour" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[BD].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.1718_etu32444_DB.1718_etu32444]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.1718_etu32444_DB.1718_etu32444]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeekNumber]"
+                      cachedDataType="i4"
+                      cachedName="WeekNumber"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekNumber]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[WeekNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayOfWeekNumber]"
+                      cachedDataType="i4"
+                      cachedName="DayOfWeekNumber"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeekNumber]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DayOfWeekNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[datekey]"
+                      cachedDataType="i4"
+                      cachedName="datekey"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[datekey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayOfYearNumber]"
+                      cachedDataType="i4"
+                      cachedName="DayOfYearNumber"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYearNumber]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DayOfYearNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateDuJour]"
+                      cachedDataType="dbDate"
+                      cachedName="DateDuJour"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateDuJour]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NomDuJour]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NomDuJour"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayFrenchName]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NomDuJour]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NameOfDay]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NameOfDay"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayEnglishName]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NameOfDay]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NomDuMois]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NomDuMois"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthFrenchName]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NomDuMois]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NameOfMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NameOfMonth"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthEnglishName]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NameOfMonth]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayFrenchName]"
+                      dataType="wstr"
+                      length="100"
+                      name="DayFrenchName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayEnglishName]"
+                      dataType="wstr"
+                      length="100"
+                      name="DayEnglishName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthFrenchName]"
+                      dataType="wstr"
+                      length="100"
+                      name="MonthFrenchName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthEnglishName]"
+                      dataType="wstr"
+                      length="100"
+                      name="MonthEnglishName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekNumber]"
+                      dataType="i4"
+                      name="WeekNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeekNumber]"
+                      dataType="i4"
+                      name="DayOfWeekNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYearNumber]"
+                      dataType="i4"
+                      name="DayOfYearNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{74389A0F-96F0-40E2-AF0A-E8D1DE6656CB}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="152.5,58.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="272,225" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="655,206" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="651,85" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="729.25,127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79"
+              Start="0,0"
+              End="0,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="631,359" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="732,248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.5,111"
+              Start="0,0"
+              End="-15.5,103.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.5"
+                    Point2="0,55.5"
+                    Point3="-4,55.5" />
+                  <mssgle:LineSegment
+                    End="-11.5,55.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.5,55.5"
+                    Point2="-15.5,55.5"
+                    Point3="-15.5,59.5" />
+                  <mssgle:LineSegment
+                    End="-15.5,103.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
